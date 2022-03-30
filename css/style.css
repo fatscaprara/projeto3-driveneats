@@ -1,0 +1,15 @@
+body {
+    background-color: #ffffff;
+}
+
+.pratos > div {
+    display: flex;
+}
+
+.bebidas > div {
+    display: flex;
+}
+
+.sobremesas > div {
+    display: flex;
+}
