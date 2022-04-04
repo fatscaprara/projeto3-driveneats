@@ -71,6 +71,12 @@ h6 {
     color: #000000;
 }
 
+img {
+    width: 140px;
+    height: 87px;
+    border-radius: 4px;
+}
+
 .conteudo {
     padding-left: 20px;
     margin-top: 123px;
@@ -98,6 +104,10 @@ h6 {
     width: 100%;
 }
 
+.sobremesas {
+    margin-bottom: 108px;
+}
+
 .pratos>div {
     overflow-x: scroll;
 }
@@ -117,6 +127,10 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 button {
@@ -157,6 +171,7 @@ button {
     background-color: #50D074;
     color: #ffffff;
     font-family: Roboto;
+    border-radius: 9px;
 }
 
 .escondido {
@@ -198,7 +213,7 @@ button {
     color: #E5E5E5;
 }
 
-.containerConfirmarPedido > div {
+.containerConfirmarPedido>div {
     display: flex;
     flex-direction: column;
     padding: 20px 25px;
@@ -207,7 +222,7 @@ button {
     justify-content: space-between;
 }
 
-.containerConfirmarPedido > div > div {
+.containerConfirmarPedido>div>div {
     display: flex;
     justify-content: space-between;
     width: 100%;

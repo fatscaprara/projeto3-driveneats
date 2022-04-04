@@ -109,5 +109,10 @@ function confirmarPedido() {
     window.location.href = `https://wa.me/5567996599103?text=${mensagem}`;
 }
 
+function cancelarConfirmacao() {
+    document.querySelector(".containerConfirmarPedido").classList.add("escondido");
+    document.location.reload(true);
+}
+
 
 
