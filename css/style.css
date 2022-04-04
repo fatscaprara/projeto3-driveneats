@@ -137,3 +137,78 @@ button {
 .botaoSelecionado {
     background-color: #32b72f;
 }
+
+.containerConfirmarPedido {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerConfirmarPedido>div {
+    width: 380px;
+    height: 350px;
+    background-color: #50D074;
+    color: #ffffff;
+    font-family: Roboto;
+}
+
+.escondido {
+    display: none;
+}
+
+.containerConfirmarPedido button {
+    background-color: #ffffff;
+    color: #50D074;
+    font-weight: 700;
+    width: 340px;
+}
+
+.containerConfirmarPedido a {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.containerConfirmarPedido h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.containerConfirmarPedido p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #E5E5E5;
+}
+
+.containerConfirmarPedido > div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerConfirmarPedido > div > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

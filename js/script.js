@@ -1,6 +1,15 @@
 let verificaPrato;
 let verificaBebida;
 let verificaSobremesa;
+let nome;
+let endereco;
+let nomePrato;
+let precoPrato;
+let nomeBebida;
+let precoBebida;
+let nomeSobremesa;
+let precoSobremesa;
+let total;
 
 
 function selecionaPrato(elemento) {
@@ -54,16 +63,51 @@ function selecionaSobremesa(elemento) {
     }
 }
 
-function fazerPedido() {
+function verificarPedido() {
     if (verificaPrato && verificaBebida && verificaSobremesa) {
-        alert("passou");
         document.querySelector("button").classList.add("botaoSelecionado");
+        document.querySelector(".botaoSelecionado").innerHTML = "Fechar Pedido";
     }
 }
 
-fazerPedido()
+function fecharPedido() {
+    nome = prompt("Qual é o seu nome?");
+    endereco = prompt("Qual o endereço para a entrega?");
+    document.querySelector(".containerConfirmarPedido").classList.remove("escondido");
 
-while(verificaPrato && verificaBebida && verificaSobremesa){
-    alert("passou");
-    document.querySelector("button").classList.add("botaoSelecionado");
+    nomePrato = document.querySelector(".pratos .selecionado h5").innerHTML;
+    precoPrato = Number(document.querySelector(".pratos .selecionado h6 span").innerHTML.replace(",", ".")).toFixed(2);
+
+    nomeBebida = document.querySelector(".bebidas .selecionado h5").innerHTML;
+    precoBebida = Number(document.querySelector(".bebidas .selecionado h6 span").innerHTML.replace(",", ".")).toFixed(2);
+
+    nomeSobremesa = document.querySelector(".sobremesas .selecionado h5").innerHTML;
+    precoSobremesa = Number(document.querySelector(".sobremesas .selecionado h6 span").innerHTML.replace(",", ".")).toFixed(2);
+
+    total = (Number(precoPrato) + Number(precoBebida) + Number(precoSobremesa)).toFixed(2);
+
+    document.querySelector(".nomePrato").innerHTML = nomePrato;
+    document.querySelector(".precoPrato").innerHTML = precoPrato;
+
+    document.querySelector(".nomeBebida").innerHTML = nomeBebida;
+    document.querySelector(".precoBebida").innerHTML = precoBebida;
+
+    document.querySelector(".nomeSobremesa").innerHTML = nomeSobremesa;
+    document.querySelector(".precoSobremesa").innerHTML = precoSobremesa;
+
+    document.querySelector(".total").innerHTML += total;
 }
+
+function confirmarPedido() {
+    const mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    - Prato: ${nomePrato}
+    - Bebida: ${nomeBebida}
+    - Sobremesa: ${nomeSobremesa}
+    Total: R$${total}
+    Nome: ${nome}
+    Endereço: ${endereco}`);
+    window.location.href = `https://wa.me/5567996599103?text=${mensagem}`;
+}
+
+
+
