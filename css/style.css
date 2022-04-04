@@ -67,7 +67,7 @@ h5 {
 h6 {
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;  
+    line-height: 19px;
     color: #000000;
 }
 
@@ -92,6 +92,48 @@ h6 {
     box-sizing: border-box;
 }
 
+.pratos,
+.bebidas,
+.sobremesas {
+    width: 100%;
+}
+
+.pratos>div {
+    overflow-x: scroll;
+}
+
+.bebidas>div {
+    overflow-x: scroll;
+}
+
+.sobremesas>div {
+    overflow-x: scroll;
+}
+
 .fechar-pedido {
-    height: 2000px;
+    background-color: #ffffff;
+    margin-top: 16px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 364px;
+    height: 60px;
+    font-family: Roboto;
+    color: #ffffff;
+    background-color: #cbcbcb;
+    border: 0;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.selecionado {
+    border: #32b72f 2px solid;
+}
+
+.botaoSelecionado {
+    background-color: #32b72f;
 }
